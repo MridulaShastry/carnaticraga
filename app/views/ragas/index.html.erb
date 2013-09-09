@@ -1,0 +1,35 @@
+<head>
+<style>
+.centerTable {
+  margin: 0px auto;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<h1 style="text-align:center;">CarnaticRaga.com Ragas</h1>
+<h2 style="text-align:center;">
+  <a href="../home/index.html">HOME</a>
+  <a href="../ragas/index.html">RAGAS</a>
+  <a href="../compositions/index.html">COMPOSITIONS</a>
+  <a href="../composers/index.html">COMPOSERS</a>
+  <a href="../legends/index.html">LEGENDS</a>
+</h2>
+
+<table class="centerTable">
+  <tr>
+    <td>RAGA</td>
+    <td>AAROHANA</td>
+    <td>AVAROHANA</td>
+  </tr>
+<% @ragas.each do |raga| %>
+  <tr>
+    <td><%= raga.raga %></td>
+    <td><%= raga.aarohana %></td>
+    <td><%= raga.avarohana %></td>
+  </tr>
+<% end %>
+</table>

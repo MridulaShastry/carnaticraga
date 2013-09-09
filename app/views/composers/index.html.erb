@@ -1,0 +1,41 @@
+<head>
+<style>
+.centerTable {
+  margin: 0px auto;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<h1 style="text-align:center;">CarnaticRaga.com Composers</h1>
+<h2 style="text-align:center;">
+  <a href="../home/index.html">HOME</a>
+  <a href="../ragas/index.html">RAGAS</a>
+  <a href="../compositions/index.html">COMPOSITIONS</a>
+  <a href="../composers/index.html">COMPOSERS</a>
+  <a href="../legends/index.html">LEGENDS</a>
+</h2>
+
+<table class="centerTable">
+  <tr>
+    <td>COMPOSER</td>
+    <td>BIRTHYEAR</td>
+    <td>DEATHYEAR</td>
+    <td>PLACE</td>
+    <td>BIOGRAPHY</td>
+  </tr>
+  
+  <% @composers.each do |composer| %>
+    <tr>
+      <td><%= composer.composer %></td>
+      <td><%= composer.birthyear %></td>
+      <td><%= composer.deathyear %></td>
+      <td><%= composer.place %></td>
+      <td><%= composer.biography %></td>
+    </tr>
+   <% end %>
+</table>
+  

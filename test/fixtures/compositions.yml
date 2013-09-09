@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  composition: MyString
+  composer: MyString
+  composer_id: 1
+  raga: MyString
+  raga_id: 1
+  taala: MyString
+  language: MyString
+
+two:
+  composition: MyString
+  composer: MyString
+  composer_id: 1
+  raga: MyString
+  raga_id: 1
+  taala: MyString
+  language: MyString

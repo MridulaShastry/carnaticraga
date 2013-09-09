@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  raga: MyString
+  aarohana: MyString
+  avarohana: MyString
+
+two:
+  raga: MyString
+  aarohana: MyString
+  avarohana: MyString
