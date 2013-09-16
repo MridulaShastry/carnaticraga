@@ -1,0 +1,38 @@
+<head>
+<script>
+function loadXMLDoc() {
+  var xmlhttp;
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  }
+  xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      document.getElementById("Details").innerHTML=xmlhttp.responseText;
+    }
+  }
+  xmlhttp.open("GET", <%= @comment.id %> + ".xml",true);
+  xmlhttp.send();
+}
+</script>
+</head>
+
+<h1 style="text-align:center;">Comment</h1>
+<div style="text-align:center;">
+<p>
+  <strong>Name:</strong>
+  <%= @comment.name %>
+</p>
+ 
+<p>
+  <strong>Comment:</strong>
+  <%= @comment.comment %>
+</p>
+
+<%= link_to 'Back', comments_path %>
+<%= link_to 'Edit', edit_comment_path(@comment) %>
+</div>
+
+
+<div style="text-align:center;" id="Details">
+<button type="button" onclick="loadXMLDoc()">Show Details in XML</button>
+</div>

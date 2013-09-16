@@ -10,20 +10,18 @@ table, th, td {
 </style>
 </head>
 
-<h1 style="text-align:center;">CarnaticRaga.com Ragas</h1>
-<h2 style="text-align:center;">
-  <a href="../home/index.html">HOME</a>
-  <a href="../ragas/index.html">RAGAS</a>
-  <a href="../compositions/index.html">COMPOSITIONS</a>
-  <a href="../composers/index.html">COMPOSERS</a>
-  <a href="../legends/index.html">LEGENDS</a>
-</h2>
+<h1 style="text-align:center;">Ragas</h1>
+
+<form style="text-align:center;">
+Select Raga: <%= collection_select(:post, :raga_id, @ragas, :id, :raga) %>
+<input type="submit">
+</form>
 
 <table class="centerTable">
   <tr>
-    <td>RAGA</td>
-    <td>AAROHANA</td>
-    <td>AVAROHANA</td>
+    <th>RAGA</th>
+    <th>AAROHANA</th>
+    <th>AVAROHANA</th>
   </tr>
 <% @ragas.each do |raga| %>
   <tr>

@@ -1,0 +1,30 @@
+<head>
+<style>
+.centerTable {
+  margin: 0px auto;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<h1 style="text-align:center;">Comments</h1>
+<h3 style="text-align:center;"><%= link_to 'New Comment', new_comment_path %></h3>
+
+<table class="centerTable">
+  <tr>
+    <th>Name</th>
+    <th>Comments</th>
+  </tr>
+<% @comments.each do |comment| %>
+  <tr>
+    <td><%= comment.name %></td>
+    <td><%= comment.comment %></td>
+    <td><%= link_to 'Show', comment_path(comment) %></td>
+    <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+    <td><%= link_to 'Delete', comment_path(comment), :method => :delete, :remote => true, :class => 'delete_commment'%></td>
+  </tr>
+<% end %>
+</table>

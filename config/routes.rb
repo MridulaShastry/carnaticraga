@@ -1,4 +1,5 @@
 Carnaticraga::Application.routes.draw do
+  get "about/index"
   get "legends/index"
   get "composers/index"
   get "compositions/index"
@@ -12,7 +13,7 @@ Carnaticraga::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
+  
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
@@ -31,6 +32,8 @@ Carnaticraga::Application.routes.draw do
   #     end
   #   end
 
+  resources :comments
+   
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

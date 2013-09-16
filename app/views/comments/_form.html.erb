@@ -1,0 +1,24 @@
+<div style="text-align:center;">
+<%= form_for @comment do |f| %>
+  <% if @comment.errors.any? %>
+  <div style="text-align:center;">
+   <% @comment.errors.full_messages.each do |msg| %> </p>
+      <p><%= msg %></p>
+   <% end %>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :comment %><br>
+    <%= f.text_area :comment %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+</div>

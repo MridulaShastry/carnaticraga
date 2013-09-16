@@ -1,0 +1,5 @@
+$('.delete_comment').bind('ajax:success', function() {
+    var row = $(this).closest("tr").get(0);
+    $(row).hide();
+       
+});

@@ -4,11 +4,22 @@
   <title>Carnaticraga</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "jQuery" %>
+  <%= javascript_include_tag :rails, :application %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<h1 style="text-align:center;">CarnaticRaga.com</h1>
+<h2 style="text-align:center;">
+  <%= link_to "HOME", controller: "home" %>
+  <%= link_to "RAGAS", controller: "ragas" %>
+  <%= link_to "COMPOSITIONS", controller: "compositions" %>
+  <%= link_to "COMPOSERS", controller: "composers" %>
+  <%= link_to "LEGENDS", controller: "legends" %>
+  <%= link_to "ABOUT", controller: "about" %>
+  <%= link_to "COMMENTS", controller: "comments" %>
+</h2>
 <%= yield %>
-
 </body>
 </html>

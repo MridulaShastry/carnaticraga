@@ -1,0 +1,6 @@
+This is a website for Carnatic music. It has basic functional support as specified below:
+6 controllers
+3 models
+6 views
+The models are associated with 2 many-to-one foreign key relationships.
+Few testcases have been implemented for static views using rspec.

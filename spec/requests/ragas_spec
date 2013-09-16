@@ -1,0 +1,12 @@
+require 'spec-helper'
+
+ describe "Ragas" do
+  describe "index page" do
+    it "should have the content 'RAGAS'" do
+      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
+      visit '/home/index'
+      expect(page).to have_content('RAGAS')
+      #response.status.should be(200)
+    end
+  end
+end
